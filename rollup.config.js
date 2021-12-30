@@ -15,7 +15,7 @@ export default async function () {
       nodeResolve(),
       qwikRollup({
         symbolsOutput: (data) => {
-          outputJSON('./server/build/q-symbols.json', data);
+          outputJSON('./build/q-symbols.json', data);
         },
       }),
       typescript(),
@@ -28,7 +28,7 @@ export default async function () {
         format: 'es',
       },
       {
-        dir: 'server/build',
+        dir: 'build',
         format: 'cjs',
       },
     ],
